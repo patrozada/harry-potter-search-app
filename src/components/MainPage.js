@@ -8,9 +8,13 @@ class MainPage extends React.Component{
     return(
       <React.Fragment>
         <MainHeader/>
-        <Filters/>
+        <Filters
+          methodInputchange = {this.props.methodInputchange}
+          value = {this.props.value}
+        />
         <List
-          characterList = {this.props.characterList} 
+          characterDefaultList = {this.props.characterDefaultList}
+          characterFilteredList = {this.props.characterFilteredList}
         />
       </React.Fragment>
       

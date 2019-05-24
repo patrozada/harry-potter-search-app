@@ -6,25 +6,49 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      characters : []
+      allCharacters :[],
+      filterValue :'',
+      filteredCharacters:[],
     }
     this.getData = this.getData.bind(this);
-    this.getData();
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.getData()
   }
+
   getData(){
     fetch('http://hp-api.herokuapp.com/api/characters')
       .then(response => response.json())
       .then(characters =>
         this.setState({
-          characters: characters
+          allCharacters: characters
         }))
+  }
+
+  filterData(){
+    const { allCharacters, filterValue } = this.state;
+    const filteredCharacters = allCharacters.filter(character => character.name.includes(filterValue))
+    return filteredCharacters
+  }
+
+  handleInputChange(event){
+    const newFilterValue = event.currentTarget.value;  
+    this.setState(prevState =>{
+      return{
+        ...prevState,
+        filterValue:newFilterValue,
+        filteredCharacters:this.filterData()
+      }
+    })
   }
 
   render() {
     return (
       <div className="App">
         <MainPage
-          characterList = {this.state.characters}
+          characterDefaultList = {this.state.allCharacters}
+          characterFilteredList = {this.state.filteredCharacters}
+          value = {this.state.filterValue}
+          methodInputchange = {this.handleInputChange}
         />
       </div>
     );
