@@ -7,7 +7,6 @@ class MainPage extends React.Component{
   render(){
     return(
       <React.Fragment>
-        'Soy MainPage'
         <MainHeader/>
         <Filters/>
         <List
