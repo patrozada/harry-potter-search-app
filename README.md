@@ -1,0 +1,1 @@
+This is a Harry Potter site where you can filter the characters of the saga. It is created with JS and React.
