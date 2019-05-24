@@ -2,7 +2,7 @@ import React from 'react';
 
 class Filters extends React.Component{
   render (){
-    const {methodInputchange, value} =this.props;
+    const {methodInputchange} =this.props;
     return(
       <div>
         <label htmlFor="search"></label>

@@ -24,9 +24,9 @@ class App extends React.Component {
         }))
   }
 
-  filterData(){
-    const { allCharacters, filterValue } = this.state;
-    const filteredCharacters = allCharacters.filter(character => character.name.includes(filterValue))
+  filterData(filter){
+    const { allCharacters } = this.state;
+    const filteredCharacters = allCharacters.filter(character => character.name.includes(filter))
     return filteredCharacters
   }
 
@@ -36,7 +36,7 @@ class App extends React.Component {
       return{
         ...prevState,
         filterValue:newFilterValue,
-        filteredCharacters:this.filterData()
+        filteredCharacters:this.filterData(newFilterValue)
       }
     })
   }

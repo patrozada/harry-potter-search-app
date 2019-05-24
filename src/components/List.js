@@ -3,8 +3,8 @@ import Card from "./Card";
 
 class List extends React.Component {
 	render() {
-		const { characterDefaultList, characterFilteredList } = this.props;
-		return characterFilteredList.length === 0 ? (
+		const { characterDefaultList, characterFilteredList, value} = this.props;
+		return characterFilteredList.length === 0 || !value ? (
 			<ul>
 				{characterDefaultList.map((character, index) => (
 					<li key={index + 1}>
