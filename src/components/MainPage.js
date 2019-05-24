@@ -10,7 +10,9 @@ class MainPage extends React.Component{
         'Soy MainPage'
         <MainHeader/>
         <Filters/>
-        <List/>
+        <List
+          characterList = {this.props.characterList} 
+        />
       </React.Fragment>
       
     )
