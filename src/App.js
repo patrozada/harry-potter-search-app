@@ -1,5 +1,6 @@
 import React from "react";
 import MainPage from "./components/MainPage";
+import DetailCard from "./components/DetailCard";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 
@@ -55,7 +56,7 @@ class App extends React.Component {
 			<div className='App'>
 				<Switch>
           <Route 
-            path='/' 
+            exact path='/' 
             render = {routerProps => (
               <MainPage 
                 match = {routerProps.match}
@@ -66,6 +67,15 @@ class App extends React.Component {
               />
             )}
            />
+					<Route
+						path= '/detail/:id'
+						render = {routerProps => (
+							<DetailCard
+								match = {routerProps.match}
+								characterDefaultList={this.state.allCharacters}
+							/>
+						)}
+					/>
 				</Switch>
 			</div>
 		);
@@ -73,10 +83,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-{/* <MainPage
-  characterDefaultList={this.state.allCharacters}
-  characterFilteredList={this.state.filteredCharacters}
-  value={this.state.filterValue}
-  methodInputchange={this.handleInputChange}
-/> */}
