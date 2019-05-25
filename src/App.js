@@ -1,4 +1,5 @@
 import React from "react";
+import {fetchInfo} from './services/fetch'
 import MainPage from "./components/MainPage";
 import DetailCard from "./components/DetailCard";
 import { Route, Switch } from "react-router-dom";
@@ -18,8 +19,7 @@ class App extends React.Component {
 	}
 
 	getData() {
-		fetch("http://hp-api.herokuapp.com/api/characters")
-			.then(response => response.json())
+		fetchInfo()
 			.then(characters =>
 				this.setState({
 					allCharacters: characters.map((character,index)=>{

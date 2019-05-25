@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class List extends React.Component {
 	render() {
 		const { characterDefaultList, characterFilteredList, value} = this.props;
-		return characterFilteredList.length === 0 || !value ? (
+		return (characterFilteredList.length === 0 && !value) || !value ? (
 			<ul>
 				{characterDefaultList.map((character, index) => (
 					<li key={index + 1}>

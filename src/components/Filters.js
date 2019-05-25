@@ -6,7 +6,7 @@ class Filters extends React.Component{
     return(
       <div>
         <label htmlFor="search"></label>
-        <input onChange = {methodInputchange} type="text" placeholder="Escribe un nombre"/>
+        <input onChange = {methodInputchange} type="text" placeholder="Write a name..."/>
       </div>
     )
   }
