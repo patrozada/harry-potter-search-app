@@ -5,17 +5,20 @@ import List from "./List";
 
 class MainPage extends React.Component {
 	render() {
+		const {
+			methodInputChange,
+			value,
+			characterDefaultList,
+			characterFilteredList
+		} = this.props;
 		return (
 			<React.Fragment>
 				<MainHeader />
-				<Filters
-					methodInputChange={this.props.methodInputChange}
-					value={this.props.value}
-				/>
+				<Filters methodInputChange={methodInputChange} value={value} />
 				<List
-					value={this.props.value}
-					characterDefaultList={this.props.characterDefaultList}
-					characterFilteredList={this.props.characterFilteredList}
+					value={value}
+					characterDefaultList={characterDefaultList}
+					characterFilteredList={characterFilteredList}
 				/>
 			</React.Fragment>
 		);

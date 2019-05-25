@@ -1,5 +1,5 @@
 import React from "react";
-import {fetchInfo} from './services/fetch'
+import { fetchInfo } from "./services/fetch";
 import MainPage from "./components/MainPage";
 import DetailCard from "./components/DetailCard";
 import { Route, Switch } from "react-router-dom";
@@ -19,17 +19,17 @@ class App extends React.Component {
 	}
 
 	getData() {
-		fetchInfo()
-			.then(characters =>
-				this.setState({
-					allCharacters: characters.map((character,index)=>{
-						return{
-							...character,
-							uuid:index + 1,
-						}
-					})
+		fetchInfo().then(characters =>
+			this.setState({
+				allCharacters: characters.map((character, index) => {
+					return {
+						...character,
+						name: character.name.toUpperCase(),
+						uuid: index + 1
+					};
 				})
-			);
+			})
+		);
 	}
 
 	filterData(filter) {
@@ -42,7 +42,7 @@ class App extends React.Component {
 
 	handleInputChange(event) {
 		const newFilterValue = event.currentTarget.value.toUpperCase();
-	
+
 		this.setState(prevState => {
 			return {
 				...prevState,
@@ -53,27 +53,29 @@ class App extends React.Component {
 	}
 
 	render() {
+		const { allCharacters, filteredCharacters, filterValue } = this.state;
 		return (
 			<div className='App'>
 				<Switch>
-          <Route 
-            exact path='/' 
-            render = {routerProps => (
-              <MainPage 
-                match = {routerProps.match}
-                characterDefaultList={this.state.allCharacters}
-                characterFilteredList={this.state.filteredCharacters}
-                value={this.state.filterValue}
-                methodInputChange={this.handleInputChange}
-              />
-            )}
-           />
 					<Route
-						path= '/detail/:id'
-						render = {routerProps => (
+						exact
+						path='/'
+						render={routerProps => (
+							<MainPage
+								match={routerProps.match}
+								characterDefaultList={allCharacters}
+								characterFilteredList={filteredCharacters}
+								value={filterValue}
+								methodInputChange={this.handleInputChange}
+							/>
+						)}
+					/>
+					<Route
+						path='/detail/:id'
+						render={routerProps => (
 							<DetailCard
-								match = {routerProps.match}
-								characterDefaultList={this.state.allCharacters}
+								match={routerProps.match}
+								characterDefaultList={allCharacters}
 							/>
 						)}
 					/>
