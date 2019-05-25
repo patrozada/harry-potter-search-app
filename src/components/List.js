@@ -12,7 +12,7 @@ class List extends React.Component {
 							name={character.name}
 							house={character.house}
 							src={character.image}
-							id={index + 1}
+							id={character.uuid}
 						/>
 					</li>
 				))}
@@ -25,7 +25,7 @@ class List extends React.Component {
 							name={character.name}
 							house={character.house}
 							src={character.image}
-							id={index + 1}
+							id={character.uuid}
 						/>
 					</li>
 				))}

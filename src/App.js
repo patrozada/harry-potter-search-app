@@ -21,7 +21,12 @@ class App extends React.Component {
 			.then(response => response.json())
 			.then(characters =>
 				this.setState({
-					allCharacters: characters
+					allCharacters: characters.map((character,index)=>{
+						return{
+							...character,
+							uuid:index + 1,
+						}
+					})
 				})
 			);
 	}
