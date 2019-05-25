@@ -9,7 +9,7 @@ class MainPage extends React.Component {
 			<React.Fragment>
 				<MainHeader />
 				<Filters
-					methodInputchange={this.props.methodInputchange}
+					methodInputChange={this.props.methodInputChange}
 					value={this.props.value}
 				/>
 				<List

@@ -41,7 +41,8 @@ class App extends React.Component {
 	}
 
 	handleInputChange(event) {
-		const newFilterValue = event.currentTarget.value;
+		const newFilterValue = event.currentTarget.value.toUpperCase();
+	
 		this.setState(prevState => {
 			return {
 				...prevState,
@@ -63,7 +64,7 @@ class App extends React.Component {
                 characterDefaultList={this.state.allCharacters}
                 characterFilteredList={this.state.filteredCharacters}
                 value={this.state.filterValue}
-                methodInputchange={this.handleInputChange}
+                methodInputChange={this.handleInputChange}
               />
             )}
            />

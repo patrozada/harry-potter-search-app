@@ -2,11 +2,11 @@ import React from 'react';
 
 class Filters extends React.Component{
   render (){
-    const {methodInputchange} =this.props;
+    const {methodInputChange} =this.props;
     return(
       <div>
         <label htmlFor="search"></label>
-        <input onChange = {methodInputchange} type="text" placeholder="Write a name..."/>
+        <input onChange = {methodInputChange} type="text" placeholder="Write a name..."/>
       </div>
     )
   }
