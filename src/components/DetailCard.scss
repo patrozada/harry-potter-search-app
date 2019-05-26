@@ -1,0 +1,36 @@
+.detail-card {
+	height: 60vh;
+	width: 80vw;
+	position: absolute;
+	background-color: $color-Hogwarts--darkblack;
+	border: 1px solid pink;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: flex-start;
+	&--image {
+		height: 100%;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+	}
+	&--text {
+		color: $color-Hogwarts--lightwhite;
+		font: $font-text;
+		margin: 20px 10px;
+		height: 85%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&--interactive {
+		display: flex;
+		justify-content: flex-start;
+		align-items: space-between;
+		&__icon {
+			padding: 0 10px;
+		}
+	}
+}

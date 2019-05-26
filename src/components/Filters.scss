@@ -1,0 +1,19 @@
+.filter--box{
+  padding:50px;
+  display:flex;
+  justify-content: center;
+}
+.input--box{
+  height: 50px;
+  width:300px;
+  padding: 0 15px;
+  border-radius: 8px;
+  border: 1px solid white;
+  box-shadow:2px 2px 5px $color-Hogwarts--dimyellow,
+  -2px -2px 5px $color-Hogwarts--dimyellow;
+  &::placeholder{
+    font-family: $font-text;
+    font-size: 18px;
+    color:$color-Hogwarts--lightgrey;
+  }
+}

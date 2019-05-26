@@ -9,18 +9,22 @@ function DetailCard(props) {
 		character => character.uuid === parseInt(id)
 	);
 	return selectedChar ? (
-		<div>
-			<h4>{selectedChar.name}</h4>
+		<div className='detail-card'>
 			<div
-				className='imageContainer'
+				className='detail-card--image'
 				style={{ backgroundImage: `url(${selectedChar.image})` }}
 			/>
-			<h5>{selectedChar.house}</h5>
-			<h5>patronus:{selectedChar.patronus}</h5>
-			<h5>{selectedChar.alive}</h5>
-			<Link to='/'>
-				<button type='button'>Back to Home</button>
-			</Link>
+			<div className='detail-card--text'>
+				<h4>{selectedChar.name}</h4>
+				<h5>{selectedChar.house}</h5>
+				<h5>patronus:{selectedChar.patronus}</h5>
+				<div className='detail-card--interactive'>
+					<h5 className='detail-card--interactive__icon'><i class="fas fa-heartbeat"></i><i class="fas fa-skull-crossbones"></i>{selectedChar.alive}</h5>
+					<Link to='/'>
+						<button type='button'>Back to Home</button>
+					</Link>
+				</div>
+			</div>
 		</div>
 	) : (
 		<div>

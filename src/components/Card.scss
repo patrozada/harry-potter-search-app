@@ -1,10 +1,9 @@
 @import '../services/variables';
 
-.card--container{
+.card{
   width:200px;
   height:300px;
   background-color:$color-Hogwarts--darkblack;
-  border: 2px solid  $color-Hogwarts--lightgrey;
   border-radius: 16px;
   margin: 20px;
   display: flex;
@@ -12,30 +11,30 @@
   justify-content: space-evenly;
   align-items: center;
   color:$color-Hogwarts--lightwhite;
-  box-shadow: 1px 1px 10px $color-Hogwarts--dimyellow,
-  -1px -1px 10px  $color-Hogwarts--dimyellow;
+  box-shadow: 1px 1px 20px $color-Hogwarts--dimyellow,
+  -1px -1px 20px  $color-Hogwarts--dimyellow;
     &:hover{
-      box-shadow: 4px 4px 15px $color-Hogwarts--dimyellow,
-  -4px -4px 15px  $color-Hogwarts--dimyellow;
+      box-shadow: 4px 4px 35px $color-Hogwarts--dimyellow,
+  -4px -4px 35px  $color-Hogwarts--dimyellow;
     }
-}
-.card--title{
-  padding: 15px 0;
-  text-transform: lowercase;
-  font-family: $font-text;
-  font-size:20px;
-  font-weight: 700;
-}
-.card--closing{
-  padding: 15px 0;
-  text-transform: capitalize;
-  font-family: $font-text;
-  font-size:14px;
-}
-.imageContainer{
-  height: 220px;
-  width: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+    &--title{
+      padding: 15px 0;
+      text-transform: lowercase;
+      font-family: $font-text;
+      font-size:20px;
+      font-weight: 700;
+    }
+    &--closing{
+      padding: 15px 0;
+      text-transform: capitalize;
+      font-family: $font-text;
+      font-size:14px;
+    }
+    &--image{
+      height: 220px;
+      width: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
 }

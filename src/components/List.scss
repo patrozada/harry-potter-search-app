@@ -1,0 +1,18 @@
+.results{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-gap: 10px 30px;
+    .results--info{
+      display:flex;
+      justify-content: center;
+      grid-column: 1/2;
+      color:$color-Hogwarts--dimyellow;
+      font-family: $font-text;
+      text-shadow: 1px 1px 15px $color-Hogwarts--dimyellow,
+      -1px -1px 15px $color-Hogwarts--dimyellow;
+    }
+    .results--item{
+      display:flex;
+      justify-content: center;
+    }
+}
