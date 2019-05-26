@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function List(props) {
 	const { characterDefaultList, characterFilteredList, value } = props;
 	return (characterFilteredList.length === 0 && !value) || !value ? (
-		<ul className='results'>
+		<ul className='results--container'>
 			<h3 className='results--info'>{`You are seeing ${characterDefaultList.length} out of ${characterDefaultList.length} characters`}</h3>
 			{characterDefaultList.map((character, index) => (
 				<li key={index + 1} className='results--item'>
@@ -21,7 +21,7 @@ function List(props) {
 			))}
 		</ul>
 	) : (
-		<ul className='results'>
+		<ul className='results--container'>
 			<h3 className='results--info'>{`You are seeing ${characterFilteredList.length} out of ${characterDefaultList.length} charachters`}</h3>
 			{characterFilteredList.map((character, index) => (
 				<li key={character.uuid} className='results--item'>
