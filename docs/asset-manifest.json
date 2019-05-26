@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.962dcd7b.chunk.css",
-    "main.js": "./static/js/main.ebc23b50.chunk.js",
-    "main.js.map": "./static/js/main.ebc23b50.chunk.js.map",
+    "main.css": "./static/css/main.b63d76cd.chunk.css",
+    "main.js": "./static/js/main.e826b82c.chunk.js",
+    "main.js.map": "./static/js/main.e826b82c.chunk.js.map",
     "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
     "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
-    "static/js/2.2668f2aa.chunk.js": "./static/js/2.2668f2aa.chunk.js",
-    "static/js/2.2668f2aa.chunk.js.map": "./static/js/2.2668f2aa.chunk.js.map",
+    "static/js/2.066d8d50.chunk.js": "./static/js/2.066d8d50.chunk.js",
+    "static/js/2.066d8d50.chunk.js.map": "./static/js/2.066d8d50.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.071a9a5431c1cb1b18d44458472c3788.js": "./precache-manifest.071a9a5431c1cb1b18d44458472c3788.js",
+    "precache-manifest.e199e6cae1432e21f6fcab5efae9db34.js": "./precache-manifest.e199e6cae1432e21f6fcab5efae9db34.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.962dcd7b.chunk.css.map": "./static/css/main.962dcd7b.chunk.css.map"
+    "static/css/main.b63d76cd.chunk.css.map": "./static/css/main.b63d76cd.chunk.css.map",
+    "static/media/harry-potter.png": "./static/media/harry-potter.a0566dac.png",
+    "static/media/hogwarts-tablet.png": "./static/media/hogwarts-tablet.2ef9d95a.png"
   }
 }
