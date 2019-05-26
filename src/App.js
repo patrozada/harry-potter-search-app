@@ -3,7 +3,7 @@ import { fetchInfo } from "./services/fetch";
 import MainPage from "./components/MainPage";
 import DetailCard from "./components/DetailCard";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 
 class App extends React.Component {
 	constructor(props) {

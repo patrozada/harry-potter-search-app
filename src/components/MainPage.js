@@ -11,15 +11,18 @@ function MainPage(props) {
 		characterFilteredList
 	} = props;
 	return (
-		<React.Fragment>
+		<main className='main--wrapper'>
 			<MainHeader />
-			<Filters methodInputChange={methodInputChange} value={value} />
-			<List
-				value={value}
-				characterDefaultList={characterDefaultList}
-				characterFilteredList={characterFilteredList}
-			/>
-		</React.Fragment>
+			<div className='main--background'>
+				<Filters methodInputChange={methodInputChange} value={value} />
+				<List
+					value={value}
+					characterDefaultList={characterDefaultList}
+					characterFilteredList={characterFilteredList}
+				/>
+
+			</div>
+		</main>
 	);
 }
 export default MainPage;

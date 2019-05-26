@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+@import "./services/variables";
+
+@import "./components/Card.scss";
+@import "./components/DetailCard.scss";
+@import "./components/Filters.scss";
+@import "./components/List.scss";
+@import "./components/MainHeader.scss";
+@import "./components/MainPage.scss";
+

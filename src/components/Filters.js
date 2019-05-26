@@ -3,7 +3,7 @@ import React from "react";
 function Filters(props) {
 	const { methodInputChange } = props;
 	return (
-		<div>
+		<div className='filter--box'>
 			<label htmlFor='search' />
 			<input
 				onChange={methodInputChange}
