@@ -18,3 +18,12 @@ $color-Hogwarts--darkblack:#1A1423;
 
 $font-text: 'Averia Serif Libre', cursive;
 $font-title: 'Cinzel Decorative', cursive;
+
+.Gryffindor{
+  .dark{
+    background-color:$color-Gryffindor--darkred;
+  }
+  .light{
+    color:$color-Gryffindor--gold; 
+  }
+}

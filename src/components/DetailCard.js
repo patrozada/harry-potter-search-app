@@ -9,41 +9,55 @@ function DetailCard(props) {
 		character => character.uuid === parseInt(id)
 	);
 	return selectedChar ? (
-		<div className='detail-card'>
-			<div
-				className='detail-card--image'
-				style={{ backgroundImage: `url(${selectedChar.image})` }}
-			/>
-			<div className='detail-card--text'>
-				<h4>{selectedChar.name}</h4>
-				<h5>
-					{"Date of Birth: "}
-					{selectedChar.dateOfBirth || "Unknown"}
-				</h5>
-				<h5>
-					{"House: "}
-					{selectedChar.house || "Not a member of any house."}
-				</h5>
-				<h5>
-					{"Patronus: "}
-					{selectedChar.patronus || "Unknown"}
-				</h5>
-				<p className='detail-card--interactive__icon'>
-					{"By the end of the saga this character is "}
-					{(selectedChar.alive && <i className='fas fa-heartbeat' />) ||
-						(!selectedChar.alive && <i className='fas fa-skull-crossbones' />)}
-				</p>
-				<Link to='/'>
-					<button type='button'>Back to Home</button>
-				</Link>
+		<div className='detail-card--page-wrapper'>
+			<div className={`detail-card--container ${selectedChar.house}--dark`}>
+				<div
+					className='detail-card--image'
+					style={{ backgroundImage: `url(${selectedChar.image})` }}
+				/>
+				<div className='detail-card--text light'>
+					<h4 className='detail-card--text__name'>{selectedChar.name}</h4>
+					<h5>
+						{"Date of Birth: "}
+						{selectedChar.dateOfBirth || "Unknown"}
+					</h5>
+					<h5>
+						{"House: "}
+						{selectedChar.house || "Not a member of any house."}
+					</h5>
+					<h5>
+						{"Patronus: "}
+						{selectedChar.patronus || "Unknown"}
+					</h5>
+					<h5 className='detail-card--alive'>
+						{"By the end of the saga this character is "}
+						{(selectedChar.alive && (
+							<i className='detail-card--icon fas fa-heartbeat' />
+						)) ||
+							(!selectedChar.alive && (
+								<i className='detail-card--icon fas fa-skull-crossbones' />
+							))}
+					</h5>
+					<Link to='/'>
+						<p className='back'>
+							<i className='fas fa-hat-wizard' />
+							<i className='fas fa-backward' />
+						</p>
+					</Link>
+				</div>
 			</div>
 		</div>
 	) : (
-		<div>
-			<p>Our appologies! Character not found</p>
-			<Link to='/'>
-				<button type='button'>Back to Home</button>
-			</Link>
+		<div className='detail-card--page-wrapper'>
+			<div>
+				<p>Our appologies! Character not found</p>
+				<Link to='/'>
+					<p className='back'>
+						<i className='fas fa-hat-wizard' />
+						<i className='fas fa-backward' />
+					</p>
+				</Link>
+			</div>
 		</div>
 	);
 }

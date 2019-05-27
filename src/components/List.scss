@@ -19,7 +19,7 @@
     display:flex;
     justify-content: center;
   }
-  @media all, (min-width:760px) and  (orientation: landscape){
+  @media (min-width:760px) and (orientation: landscape){
     &--container{
       grid-template-columns: 1fr 1fr;
       grid-gap: 30px 100px;
@@ -53,6 +53,5 @@
     &--container{
       grid-gap: 20px 80px;
     }
-
   }
 }
