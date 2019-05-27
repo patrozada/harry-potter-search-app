@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.ffe8a104.chunk.css",
+    "main.css": "./static/css/main.e82979eb.chunk.css",
     "main.js": "./static/js/main.d89350ce.chunk.js",
     "main.js.map": "./static/js/main.d89350ce.chunk.js.map",
     "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
@@ -8,9 +8,9 @@
     "static/js/2.a7aad4e9.chunk.js": "./static/js/2.a7aad4e9.chunk.js",
     "static/js/2.a7aad4e9.chunk.js.map": "./static/js/2.a7aad4e9.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.e2ec422c592bdd360181c9aa59fa4feb.js": "./precache-manifest.e2ec422c592bdd360181c9aa59fa4feb.js",
+    "precache-manifest.5fad5647d9c97179f7510b1717bd5cfa.js": "./precache-manifest.5fad5647d9c97179f7510b1717bd5cfa.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.ffe8a104.chunk.css.map": "./static/css/main.ffe8a104.chunk.css.map",
+    "static/css/main.e82979eb.chunk.css.map": "./static/css/main.e82979eb.chunk.css.map",
     "static/media/harry-potter.png": "./static/media/harry-potter.a0566dac.png",
     "static/media/App.scss": "./static/media/hogwarts-web.618f1172.png"
   }
