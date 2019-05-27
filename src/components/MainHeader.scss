@@ -45,19 +45,26 @@
   }
   @media all and (min-width:768px){
     &--container{
-      height: 800px;
+      height: 700px;
       overflow-y: hidden;
     }
     &--hogwarts{
       height: 100%;
-      width: 100%;
-      top:100px;
+      // top:100px;
       background-image: url('./services/images/hogwarts-web.png');
     }
     &--logo{
       height: 180px;
       width:500px;
-      top:550px;
+      top:500px;
+    }
+  }
+  @media all and (min-width:1440px){
+    &--container{
+      height:800px;
+    }
+    &--logo{
+      top:600px;
     }
   }
 }

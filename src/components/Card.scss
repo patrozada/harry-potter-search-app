@@ -11,11 +11,14 @@
   justify-content: space-evenly;
   align-items: center;
   color:$color-Hogwarts--lightwhite;
-  box-shadow: 1px 1px 20px $color-Hogwarts--dimyellow,
-  -1px -1px 20px  $color-Hogwarts--dimyellow;
+  box-shadow: 
+    1px 1px 10px $color-Hogwarts--dimyellow,
+  -1px -1px 10px  $color-Hogwarts--dimyellow;
+  transition: box-shadow ease 0.8s;
     &:hover{
-      box-shadow: 4px 4px 20px $color-Hogwarts--dimyellow,
-  -4px -4px 20px  $color-Hogwarts--dimyellow;
+      box-shadow: 
+      4px 4px 20px $color-Hogwarts--dimyellow,
+      -4px -4px 20px  $color-Hogwarts--dimyellow;
     }
     &--title{
       padding: 15px 0;
