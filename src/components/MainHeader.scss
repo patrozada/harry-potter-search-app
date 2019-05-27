@@ -8,10 +8,11 @@
     z-index: 0;
   }
   &--hogwarts {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     top:50px;
     position: absolute;
+    background-image: url('./services/images/hogwarts-tablet.png');
     background-size: cover;
     background-position: top center;
     z-index: 5;
@@ -44,12 +45,19 @@
   }
   @media all and (min-width:768px){
     &--container{
-      height: 600px;
+      height: 800px;
+      overflow-y: hidden;
+    }
+    &--hogwarts{
+      height: 100%;
+      width: 100%;
+      top:100px;
+      background-image: url('./services/images/hogwarts-web.png');
     }
     &--logo{
       height: 180px;
       width:500px;
-      top:400px;
+      top:550px;
     }
   }
 }

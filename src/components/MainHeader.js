@@ -8,10 +8,11 @@ class MainHeader extends React.Component{
       <div className='main-header--container'>
         <div className='main-header--moon'></div>
         <div className='main-header--logo' style={{ backgroundImage: `url(${Logo})`}}></div>
-        <div className='main-header--hogwarts' style={{ backgroundImage: `url(${Hogwarts})` }}></div>
+        <div className='main-header--hogwarts' ></div>
       </div>
       
       )
   }
 }
 export default MainHeader;
+// style={{ backgroundImage: `url(${Hogwarts})` }}

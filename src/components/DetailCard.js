@@ -10,7 +10,7 @@ function DetailCard(props) {
 	);
 	return selectedChar ? (
 		<div className='detail-card--page-wrapper'>
-			<div className={'detail-card--container'}>
+			<div className='detail-card--container'>
 				<div
 					className='detail-card--image'
 					style={{ backgroundImage: `url(${selectedChar.image})` }}
@@ -49,7 +49,7 @@ function DetailCard(props) {
 		</div>
 	) : (
 		<div className='detail-card--page-wrapper'>
-			<div>
+			<div className='message'>
 				<p>Our appologies! Character not found</p>
 				<Link to='/'>
 					<p className='back'>
