@@ -3,23 +3,14 @@ import PropTypes from 'prop-types';
 
 function Card(props) {
 	const { name, src, house } = props;
-	return (!house) ? (
+	return (
 		<div className='card card--container__hogwarts'>
 			<h4 className = 'card--title'>{name}</h4>
 			<div
 				className='card--image'
 				style={{ backgroundImage: `url(${src})` }}
 			/>
-			<h5 className='card--closing'>Not a member of any house</h5>
-		</div>
-	) : (
-		<div className='card card--container__hogwarts'>
-			<h4 className = 'card--title'>{name}</h4>
-			<div
-				className='card--image'
-				style={{ backgroundImage: `url(${src})` }}
-			/>
-			<h5 className='card--closing'> {`House of ${house}`}</h5>
+			<h5 className='card--closing'> {house || 'Not a member of any house'}</h5>
 		</div>
 	);
 }
