@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function Filters(props) {
 	const { methodInputChange } = props;
@@ -15,3 +16,8 @@ function Filters(props) {
 	);
 }
 export default Filters;
+
+Filters.propTypes={
+	methodInputChange:PropTypes.func.isRequired,
+	value:PropTypes.string.isRequired
+}

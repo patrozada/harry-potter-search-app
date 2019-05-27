@@ -1,6 +1,6 @@
 import React from "react";
-import "./Card.scss";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function DetailCard(props) {
 	const { characterDefaultList, match } = props;
@@ -16,14 +16,26 @@ function DetailCard(props) {
 			/>
 			<div className='detail-card--text'>
 				<h4>{selectedChar.name}</h4>
-				<h5>{selectedChar.house}</h5>
-				<h5>patronus:{selectedChar.patronus}</h5>
-				<div className='detail-card--interactive'>
-					<h5 className='detail-card--interactive__icon'><i class="fas fa-heartbeat"></i><i class="fas fa-skull-crossbones"></i>{selectedChar.alive}</h5>
-					<Link to='/'>
-						<button type='button'>Back to Home</button>
-					</Link>
-				</div>
+				<h5>
+					{"Date of Birth: "}
+					{selectedChar.dateOfBirth || "Unknown"}
+				</h5>
+				<h5>
+					{"House: "}
+					{selectedChar.house || "Not a member of any house."}
+				</h5>
+				<h5>
+					{"Patronus: "}
+					{selectedChar.patronus || "Unknown"}
+				</h5>
+				<p className='detail-card--interactive__icon'>
+					{"By the end of the saga this character is "}
+					{(selectedChar.alive && <i className='fas fa-heartbeat' />) ||
+						(!selectedChar.alive && <i className='fas fa-skull-crossbones' />)}
+				</p>
+				<Link to='/'>
+					<button type='button'>Back to Home</button>
+				</Link>
 			</div>
 		</div>
 	) : (
@@ -36,3 +48,27 @@ function DetailCard(props) {
 	);
 }
 export default DetailCard;
+
+DetailCard.propTypes = {
+	characterFilteredList: PropTypes.arrayOf(
+		PropTypes.shape({
+			actor: PropTypes.string,
+			alive: PropTypes.bool.isRequired,
+			ancestry: PropTypes.string,
+			dateOfBirth: PropTypes.string,
+			eyeColour: PropTypes.string,
+			gender: PropTypes.string,
+			hairColour: PropTypes.string,
+			hogwartsStaff: PropTypes.bool.isRequired,
+			hogwartsStudent: PropTypes.bool.isRequired,
+			house: PropTypes.string.isRequired,
+			image: PropTypes.string.isRequired,
+			name: PropTypes.string.isRequired,
+			patronus: PropTypes.string,
+			species: PropTypes.string.isRequired,
+			uuid: PropTypes.number.isRequired,
+			wand: PropTypes.object,
+			yearOfBirth: PropTypes.number
+		})
+	)
+};

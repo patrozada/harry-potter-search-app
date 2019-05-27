@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 function List(props) {
 	const { characterDefaultList, characterFilteredList, value } = props;
@@ -39,3 +40,9 @@ function List(props) {
 	);
 }
 export default List;
+
+List.propTypes={
+	value:PropTypes.string.isRequired,
+	characterDefaultList:PropTypes.arrayOf(PropTypes.object),
+	characterFilteredList:PropTypes.arrayOf(PropTypes.object)
+}

@@ -2,6 +2,7 @@ import React from "react";
 import MainHeader from "./MainHeader";
 import Filters from "./Filters";
 import List from "./List";
+import PropTypes from 'prop-types';
 
 function MainPage(props) {
 	const {
@@ -26,3 +27,10 @@ function MainPage(props) {
 	);
 }
 export default MainPage;
+
+MainPage.propTypes={
+	methodInputChange:PropTypes.func.isRequired,
+	value:PropTypes.string.isRequired,
+	characterDefaultList:PropTypes.arrayOf(PropTypes.object),
+	characterFilteredList:PropTypes.arrayOf(PropTypes.object)
+}

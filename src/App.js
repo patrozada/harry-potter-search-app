@@ -23,7 +23,7 @@ class App extends React.Component {
 				allCharacters: characters.map((character, index) => {
 					return {
 						...character,
-						name: character.name.toUpperCase(),
+						name: character.name.toLowerCase(),
 						uuid: index + 1
 					};
 				})
@@ -43,7 +43,7 @@ class App extends React.Component {
 	}
 
 	handleInputChange(event) {
-		const newFilterValue = event.currentTarget.value.toUpperCase();
+		const newFilterValue = event.currentTarget.value.toLowerCase();
 
 		this.setState(prevState => {
 			return {
