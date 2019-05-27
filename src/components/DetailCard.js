@@ -10,12 +10,12 @@ function DetailCard(props) {
 	);
 	return selectedChar ? (
 		<div className='detail-card--page-wrapper'>
-			<div className={`detail-card--container ${selectedChar.house}--dark`}>
+			<div className={'detail-card--container'}>
 				<div
 					className='detail-card--image'
 					style={{ backgroundImage: `url(${selectedChar.image})` }}
 				/>
-				<div className='detail-card--text light'>
+				<div className='detail-card--text'>
 					<h4 className='detail-card--text__name'>{selectedChar.name}</h4>
 					<h5>
 						{"Date of Birth: "}
