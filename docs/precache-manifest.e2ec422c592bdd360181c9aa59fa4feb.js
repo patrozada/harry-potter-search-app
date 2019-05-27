@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7392c789d4ee8c038809fb64c709f849",
+    "revision": "5985a715f3472541cc2102da6b2fc91c",
     "url": "./index.html"
   },
   {
-    "revision": "f2b9a311b3a8b484f81b",
-    "url": "./static/css/main.7283f8c7.chunk.css"
+    "revision": "3782cbb2c98d623feddf",
+    "url": "./static/css/main.ffe8a104.chunk.css"
   },
   {
-    "revision": "3c41a3c0188a3ef84db1",
-    "url": "./static/js/2.6a9abcd0.chunk.js"
+    "revision": "a4af588b644c30877e8c",
+    "url": "./static/js/2.a7aad4e9.chunk.js"
   },
   {
-    "revision": "f2b9a311b3a8b484f81b",
-    "url": "./static/js/main.1fd725e0.chunk.js"
+    "revision": "3782cbb2c98d623feddf",
+    "url": "./static/js/main.d89350ce.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
@@ -26,5 +26,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2ef9d95a090de6bad00c2c34a2cb9776",
     "url": "./static/media/hogwarts-tablet.2ef9d95a.png"
+  },
+  {
+    "revision": "618f1172977207bb7ce56b946de76c10",
+    "url": "./static/media/hogwarts-web.618f1172.png"
   }
 ]);
